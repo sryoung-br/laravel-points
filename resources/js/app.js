@@ -8,6 +8,22 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+/* scann vue */
+
+import VueQrcodeReader from "vue-qrcode-reader";
+
+Vue.use(VueQrcodeReader);
+
+/* vuex */
+
+import Vuex from 'Vuex';
+Vue.use(Vuex)
+const store = new Vuex.Store({
+    state: {
+        label: {}
+    }
+})
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -20,6 +36,10 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('login-component', require('./components/Login.vue').default);
+Vue.component('register-component', require('./components/Register.vue').default);
+Vue.component('point-component', require('./components/Point.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,4 +49,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    store
 });
