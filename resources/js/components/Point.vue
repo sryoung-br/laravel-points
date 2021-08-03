@@ -111,7 +111,7 @@ export default {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(176, 217, 255, 0.8);
   text-align: center;
   font-weight: bold;
   font-size: 1.4rem;

@@ -8,6 +8,15 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+/* calendar vue */
+
+import VCalendar from 'v-calendar';
+
+Vue.use(VCalendar, {
+    componentPrefix: 'vc',  // Use <vc-calendar /> instead of <v-calendar />
+                // ...other defaults
+  });
+
 /* scann vue */
 
 import VueQrcodeReader from "vue-qrcode-reader";
@@ -39,6 +48,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('login-component', require('./components/Login.vue').default);
 Vue.component('register-component', require('./components/Register.vue').default);
 Vue.component('point-component', require('./components/Point.vue').default);
+Vue.component('calendar-component', require('./components/Calendar.vue').default);
 
 
 /**

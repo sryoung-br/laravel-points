@@ -21,6 +21,10 @@ Route::get('/point', function () {
     return view('point.point');
 });
 
+Route::get('/calendar', function () {
+    return view('point.calendar');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
