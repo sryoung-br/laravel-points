@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Ponto</div>
+                CALENDAR: {{ $store.state.activeSidebar }}
+                <div class="card" style="width: 500px;">
 
                     <div class="card-body">
                         <p class="decode-result">Last result: <b>{{ result }}</b></p>
@@ -46,6 +46,7 @@ export default {
   },
 
   computed: {
+
     validationPending () {
       return this.isValid === undefined
         && this.camera === 'off'

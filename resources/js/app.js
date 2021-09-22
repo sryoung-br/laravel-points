@@ -8,6 +8,7 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+
 /* calendar vue */
 
 import VCalendar from 'v-calendar';
@@ -29,9 +30,32 @@ import Vuex from 'Vuex';
 Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
-        label: {}
+        activeSidebar: ''
     }
 })
+
+/* vue router */
+import VueRouter from 'vue-router';
+Vue.use(VueRouter)
+
+import Dashboard from './components/Dashboard';
+import ExampleComponent from './components/ExampleComponent';
+import TableActivity from './components/TableActivity';
+import Calendar from './components/Calendar';
+import Point from './components/Point';
+
+const router = new VueRouter({
+    routes: [
+        { path : '/', component: ExampleComponent },
+        { path : '/painel', component: Dashboard },
+        { path : '/calendar', component: Calendar },
+        { path : '/points', component: Point },
+        { path : '/example', component: ExampleComponent },
+        { path : '/activity', component: TableActivity }
+    ],
+    mode: 'history'
+});
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -44,11 +68,14 @@ const store = new Vuex.Store({
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('login-component', require('./components/Login.vue').default);
-Vue.component('register-component', require('./components/Register.vue').default);
-Vue.component('point-component', require('./components/Point.vue').default);
-Vue.component('calendar-component', require('./components/Calendar.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('app-component', require('./components/App.vue').default);
+// Vue.component('login-component', require('./components/Login.vue').default);
+import App from './components/App';
+import Vue from 'vue';
+// Vue.component('register-component', require('./components/Register.vue').default);
+// Vue.component('point-component', require('./components/Point.vue').default);
+// Vue.component('calendar-component', require('./components/Calendar.vue').default);
 
 
 /**
@@ -59,5 +86,9 @@ Vue.component('calendar-component', require('./components/Calendar.vue').default
 
 const app = new Vue({
     el: '#app',
-    store
+    components: {
+        App
+    },
+    store,
+    router
 });

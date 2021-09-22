@@ -1,0 +1,92 @@
+.header_iner {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    padding: 30px;
+    position: relative;
+    border-radius: 0px;
+    /* margin: 0; */
+    border-radius: 0;
+    margin: 30px 30px 30px 30px;
+    border-radius: 30px;
+}
+
+.page_title_right{
+    flex-flow: row-reverse;
+}
+
+.breadcrumb.page_bradcam {
+    background: transparent;
+    padding: 0px;
+}
+
+.page_date_button{
+    /* text-transform: capitalize; */
+    color: #9995B6;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    /* transition: .3s; */
+    min-height: 36px;
+}
+.page_date_button i{
+    font-size: 26px;
+}
+
+.card_slim{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+.card_slim .card_header_slim{
+    padding: 22px 30px;
+}
+.card_slim .card_body_slim{
+    position: relative;
+    padding: 5px 30px 25px;
+}
+
+.card_slim .main-title h3 {
+    font-family: Mulish, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(71, 77, 88);
+}
+
+.latest-update-box {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar-thumb{
+    visibility: hidden;
+    border-radius: 7px;
+    background: rgb(51 51 51 / 50%);
+    opacity: 0.2;
+}
+.latest-update-box:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+::-webkit-scrollbar{
+    background: transparent;
+    width: 5px;
+}
+
+@media (max-width: 768px) {
+    .header_iner{
+        padding: 12px;
+    }
+    .header_iner .page_title_left{
+        justify-content: center!important;
+        text-align: center!important;
+    }
+    .header_iner .page_title_left ol{
+        justify-content: center!important;
+    }
+    .header_iner .page_title_right{
+        margin-top: 8px;
+        justify-content: center!important;
+    }
+
+}

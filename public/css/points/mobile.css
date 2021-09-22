@@ -1,0 +1,106 @@
+@media (max-width: 768px) {
+    .sidebar_point{
+        display: none;
+    }
+    .sidebar_point.active{
+        display: block;
+        width: 78px!important;
+    }
+    .sidebar_point.active ~ .home_content{
+        transition: none!important;
+        width: calc(100% - 78px)!important;
+        left: 78px!important;
+    }
+    .sidebar_point.active .logo_content .logo{
+        opacity: 0!important;
+        /* pointer-events: none!important; */
+    }
+    .sidebar_point.active .menu_point{
+        left: 50%!important;
+    }
+    .sidebar_point.active .links_name{
+        display: none!important;
+    }
+    .menu_sidebarY{
+        display: block!important;
+    }
+    .sidebar_point.active ~ .home_content nav .logo{
+        opacity: 1!important;
+        transition: none;
+    }
+
+    .home_content nav .logo i{
+        font-size:20px;
+        margin-right: 5px;
+    }
+    .navbar {
+        padding: 0.5rem 1rem 0.5rem 1.6rem!important;
+    }
+    .sidebar_point.active ~ .home_content nav .menu_sidebarY{
+        display: none!important;
+    }
+    .home_content{
+        transition: none!important;
+        width: 100%!important;
+        left: 0!important;
+    }
+
+    .sidebar_point ul li{
+        margin-bottom: 18px!important;
+    }
+
+    .sidebar_point ul li a{
+        transition: none!important;
+    }
+
+    .sidebar_point ul li a:hover{
+        color: #fff;
+        background: #5a5c69;
+    }
+
+    .sidebar_point ul li a .tooltip{
+        width: 100%!important;
+        top: 76%!important;
+        display: block!important;
+        visibility: visible!important;
+        opacity: 1!important;
+    }
+
+    .sidebar_point ul li .router-link-active{
+        color: #11101d!important;
+        background: #fff!important;
+    }
+
+    .sidebar_point ul li .router-link-active .tooltip{
+        max-width: calc(100% + 14px)!important;
+        width: calc(100% + 14px)!important;
+        top: 50px!important;
+        padding: 5px!important;
+        background: rgb(0, 217, 255)!important;
+        border-bottom-left-radius: 12px!important;
+        border-top-right-radius: 12px!important;
+    }
+
+    .sidebar_point ul li .router-link-active:hover .tooltip{
+        transition: none!important;
+    }
+
+    .sidebar_point ul li .router-link-active .b2{
+        display: block!important;
+        opacity: 1!important;
+        position: absolute;
+        bottom: 0px;
+        height: 20px;
+        width: 35%;
+        background: rgb(0, 217, 255);
+        z-index: -1;
+    }
+    .sidebar_point ul li .router-link-active:hover .b2{
+        transition: none!important;
+    }
+
+    .sidebar_point ul li .router-link-active b:nth-child(1),
+    .sidebar_point ul li .router-link-active b:nth-child(2){
+    transition: none!important;
+    }
+}

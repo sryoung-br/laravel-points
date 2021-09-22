@@ -1,0 +1,175 @@
+
+.sidebar_point{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #5a5c69;
+    padding: 6px 14px;
+    padding-right: 0px;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.sidebar_point.active{
+    width: 240px;
+}
+
+/**
+ ** Logo Sidebar
+ **
+ **/
+
+.sidebar_point .logo_content .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar_point.active .logo_content .logo{
+    opacity: 1;
+}
+
+.logo_content .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.logo_content .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/**
+ ** Menu Sidebar
+ **
+ **/
+
+.sidebar_point .menu_point{
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 0px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sidebar_point.active .menu_point{
+    left: 90%;
+    transition: all 0.5s ease;
+}
+
+.sidebar_point .menu_point #menu,
+.sidebar_point.active .menu_point #menu-alt-left
+{
+    display: inline;
+}
+
+.sidebar_point .menu_point #menu-alt-left,
+.sidebar_point.active .menu_point #menu
+{
+    display: none;
+}
+
+/**
+ ** Input Search Sidebar
+ **
+ **/
+
+.sidebar_point ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.sidebar_point ul li .search{
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.5 ease;
+}
+
+.sidebar_point ul li .search:hover{
+    background: #fff;
+    color: #1d1b31;
+}
+
+/**
+ ** Menu Sidebar Y
+ **
+ **/
+
+.menu_sidebarY{
+    color: #fff;
+    font-size:20px;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+}
+
+.sidebar_point.active ~ .home_content nav .logo{
+    opacity: 0;
+}
+
+.home_content nav .logo{
+    color: #fff;
+    display: flex!important;
+    height: 50px;
+    width: auto;
+    align-items: center;
+    opacity: 1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/**
+ ** Home Content
+ **
+ **/
+
+ .home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+    overflow-y:auto;
+}
+
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    /* margin: 12px; */
+}
+
+.sidebar_point.active ~ .home_content{
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+.home_content #content-flex{
+    flex: 1 0 auto;
+}

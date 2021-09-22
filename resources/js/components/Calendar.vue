@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        CALENDAR: {{ $store.state.activeSidebar }}
         <div class="row justify-content-center">
             <p>{{ attrs.dates }}</p>
             <vc-date-picker

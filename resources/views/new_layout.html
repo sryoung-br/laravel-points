@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+    <div class="sidebar_point">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bx-stopwatch'></i>
+                <div class="logo_name">Points</div>
+            </div>
+            <div class="menu_point">
+                <i class="bx bx-menu" id="menu"></i>
+                <i class='bx bx-menu-alt-left' id="menu-alt-left"></i>
+            </div>
+        </div>
+        <ul class="nav_list">
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a class="links_group" href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip_point">Dashboard</span>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip_point">Dashboard</span>
+
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip_point">Dashboard</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="home_content d-flex flex-column">
+        <div id="content">
+            <nav class="navbar navbar-expand navbar-light bg-gradient-dark topbar mb-4 static-top">
+
+                <div class="mr-3 menu_sidebarY">
+                    <i class="bx bx-menu"></i>
+                </div>
+                <div class="logo">
+                    <i class='bx bx-stopwatch'></i>
+                    <div class="logo_name">Points</div>
+                </div>
+
+                <ul class="navbar-nav ml-auto">
+                    <!-- @auth -->
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Marcos Young</span>
+                            <img class="img-profile rounded-circle" src="{{ asset('img/undraw_profile.svg') }}">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <!-- {{ __('Profile')}} -->AAAAAA
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <!-- {{ __('Settings') }} -->BBBBB
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <!-- {{ __('Active Log') }} -->CCCCCCC
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <!-- {{ __('Logout') }} -->DDDDD
+                            </a>
+                        </div>
+                    </li>
+                    <!-- @else -->
+                    <li class="nav-item no-arrow">
+                        <a class="nav-link " href="{{ route('login') }}" role="button">
+                            <img class="img-profile rounded-circle" src="{{ asset('img/undraw_profile_1.svg') }}">
+                        </a>
+                    </li>
+                    <!-- @endauth -->
+                </ul>
+            </nav>
+
+            <div class="container-fluid">
+                <div class="text">Home Content</div>
+            </div>
+
+        </div>
+
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Points Controller 2021</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let menu = document.querySelector(".menu_point");
+        let sidebar = document.querySelector(".sidebar_point");
+        let menu2 = document.querySelector(".menu_sidebarY");
+        //let searchBtn = document.querySelector(".search");
+
+        menu.onclick = function () {
+            sidebar.classList.toggle("active");
+        }
+        menu2.onclick = function () {
+            sidebar.classList.toggle("active");
+        }
+        // searchBtn.onclick = function(){
+        //     sidebar.classList.toogle("active");
+        // }
+
+        let list = document.querySelectorAll(".list");
+        for (let i = 0; i < list.length; i++) {
+            list[i].onclick = function () {
+                let j = 0;
+                while (j < list.length) {
+                    list[j++].className = "list";
+                }
+                list[i].className = "list active";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
